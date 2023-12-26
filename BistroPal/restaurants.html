@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Restaurant List</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+</head>
+
+<body class="container mt-5">
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <a class="navbar-brand" href="index.html">BistroPal</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="restaurants.html">Restaurant List</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="addrestaurant.html">Add Restaurant</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="AboutUs.html">About Us</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <h1 class="pt-4 mb-4">Restaurant List</h1>
+
+  <div id="loading" class="alert alert-info" role="alert" style="display: none;">
+    Loading...
+  </div>
+
+  <div id="error" class="alert alert-danger" role="alert" style="display: none;"></div>
+
+  <div class="mb-3">
+    <label for="cuisineFilter">Filter by Cuisine:</label>
+    <select id="cuisineFilter" class="form-control" onchange="applyFilter()">
+      <option value="">All</option>
+      <option value="Italian">Italian</option>
+      <option value="Mexican">Mexican</option>
+    </select>
+  </div>
+
+  <div class="mb-3">
+    <label for="sortOptions">Sort by:</label>
+    <select id="sortOptions" class="form-control" onchange="applySort()">
+      <option value="name">Name</option>
+      <option value="rating">Rating</option>
+    </select>
+  </div>
+
+  <ul id="restaurantList" class="list-group"></ul>
+
+
+  <footer class="text-center mt-5">
+    <p>&copy; 2023 BistroPal. All rights reserved.</p>
+  </footer>
+
+  <script src="reasturants.js"> 
+  </script>
+
+</body>
+
+</html>
